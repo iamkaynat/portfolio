@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 16px;
+    background-color: hsla(0, 0%, 100%, 0.893);
+    position: sticky;
+    top: 0;
+    border-bottom: 4px solid;
+
+}
+
+header nav>a {
+    margin: 14px;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+footer {
+    border-top: 4px solid #000000d2;
+    padding: 16px;
+    text-align: center;
+}
+
+.container {
+    padding: 16px;
+}
+
+.container>section h2 {
+    text-align: center;
+    background-color: #000000d2;
+    color: white;
+
+}
+
+.intro {
+    padding: 16px;
+    background-color: #1d1b34;
+    margin: -16px;
+    color: white;
+    text-align: center;
+}
+
+#profile {
+    width: 400px;
+    border-radius: 20px;
+
+}
+
+.links {
+    text-decoration: none;
+    margin: auto 16px;
+}
+
+p {
+    font-size: 1.2em;
+    padding: 10px;
+    line-height: 2rem;
+}
+
+ol {
+    list-style-type: none;
+    font-size: 1.2em;
+    line-height: 2rem;
+}
+
+th {
+    background-color: #000000d2;
+    color: white;
+}
+
+table,
+tr th,
+td {
+    border: 1px solid rgba(0, 0, 0, 0.936);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+#dynamic-text {
+    color: royalblue;
+}
+
+#contact-me {
+    padding: 16px;
+}
+
+form#contact {
+    max-width: 400px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #1d1b34;
+    color: white;
+}
+
+
+#contact label {
+    display: block;
+    font-weight: 600;
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+    width: 100%;
+    background-color: azure;
+}
