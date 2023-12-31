@@ -21,7 +21,15 @@ header {
 }
 
 header nav>a {
-    margin: 14px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+header nav>a:last-child {
+    margin-right: revert;
     text-decoration: none;
     color: black;
 
@@ -126,4 +134,44 @@ form#contact {
 #contact button {
     width: 100%;
     background-color: azure;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media (width<550px) {
+    .default-nav {
+        display: none;
+    }
+
+    .mobile-nav,
+    .menu {
+        display: revert;
+    }
+
+    #menu-btn {
+        display: block;
+        background: transparent;
+        border-radius: 8px;
+        border: 1px solid #1d1b34;
+        margin-left: auto;
+
+    }
+
+    .menu {
+        display: revert;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@media(width<=450px) {
+    #profile {
+        width: 100%;
+    }
 }

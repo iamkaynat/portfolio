@@ -11,14 +11,29 @@
 </head>
 
 <body>
+    <section class="menu">
+        <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#tech">Technology</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+
+
+
+
+    </section>
     <header>
-        <nav>
+        <nav class="default-nav">
             <a href="#aboutme">About Me</a>
             <a href="#qualifications">Qualifications</a>
             <a href="#hobbies">Hobbies</a>
             <a href="#tech">Technology</a>
             <a href="#contact-me">Contact Me</a>
-
+        </nav>
+        <nav class="mobile-nav">
+            <button id="menu-btn">Menu</button>
         </nav>
     </header>
     <main class="container">
@@ -102,12 +117,12 @@
                 <h1>Contact Me</h1>
                 <div>
                     <label for="firstName">First name</label>
-                    <input type="text" name="firstrname" id="firstname" />
+                    <input type="text" name="firstrname" id="firstname" placeholder="Enter your first name" required />
 
                 </div>
                 <div>
                     <label for="lastName">Last name</label>
-                    <input type="text" name="lastname" id="lastname" />
+                    <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" />
                 </div>
                 <div>
                     <label for="message">Message</label>
@@ -120,7 +135,7 @@
         </section>
     </main>
     <footer>
-        Made by Kaynat.
+        Made by Unzala
     </footer>
     <script src="scipt.js"></script>
 </body>
