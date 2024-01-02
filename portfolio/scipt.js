@@ -1,41 +1,46 @@
-const text = document.getElementById('dynamic-text');
+document.addEventListener("DOMContentLoaded", function () {
 
+    const dynamicContent = document.getElementById("dynamic-text");
 
-const phrase = ['Student...', 'Software Engineer...', 'Dancer...'];
-let phraseIndex = 0;
-let index = 0;
+    const phrases = ["UI/UX designer...", "", "Frontend Developer...", "Flutter developer"]
+    let pharseIndex = 0;
+    let letterIndex = 0;
+    const typingSpeed = 150;
+    const erasingSpeed = 75
 
-function print(phrase) {
-    if (index === phrase.length) {
-        clearLetters();
+    function printLetters(phrase) {
 
-    }
-    else if (index < phrase.length) {
-        text.textContent += phrase.charAt(index);
-        index += 1;
-        setTimeout(function () {
-            print(phrase);
-        }, 200);
-    }
-
-
-}
-function clearLetters() {
-    if (index === -1) {
-        phraseIndex = (phraseIndex + 1) % phrase.length;
-        index = 0;
-        print(phrase[phraseIndex]);
-    }
-    else if (index > -1) {
-        let updatePhrase = '';
-        for (let i = 0; i < index; i++) {
-            updatePhrase += phrase[phraseIndex].charAt(i);
-
+        if (letterIndex == phrase.length) {
+            // clear letter which have been typed
+            clearLetters();
         }
-        console.log(updatePhrase);
-        text.textContent = updatePhrase;
-        index -= 1;
-        setTimeout(clearLetters, 100);
+        else if (letterIndex < phrase.length) {
+            dynamicContent.textContent += phrase.charAt(letterIndex);
+            letterIndex += 1;
+            setTimeout(function () {
+                printLetters(phrase)
+            }, typingSpeed)
+        }
     }
-}
-print(phrase[phraseIndex]);
+
+    function clearLetters() {
+        if (letterIndex == -1) {
+            pharseIndex = (pharseIndex + 1) % phrases.length;
+            letterIndex = 0;
+            printLetters(phrases[pharseIndex])
+        }
+        else if (letterIndex > -1) {
+            let updatedPhrase = "";
+            for (let index = 0; index < letterIndex; index++) {
+                updatedPhrase += phrases[pharseIndex].charAt(index);
+
+            }
+            console.log(updatedPhrase);
+            dynamicContent.textContent = updatedPhrase;
+            letterIndex -= 1;
+            setTimeout(clearLetters, erasingSpeed)
+        }
+    }
+
+    printLetters(phrases[pharseIndex])
+})
